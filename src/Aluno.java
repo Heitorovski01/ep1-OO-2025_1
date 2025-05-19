@@ -1,5 +1,9 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public abstract class Aluno extends Pessoa {
     private String curso;
+    private List<Disciplina> disciplinasMatriculadas = new ArrayList<>();
 
     public Aluno(String nome, String matricula, String curso) {
         super(nome, matricula);
@@ -14,6 +18,19 @@ public abstract class Aluno extends Pessoa {
     }
 
     public abstract boolean podeMatricular(int disciplinasQuantidade);
+
+
+    public List<Disciplina> getDisciplinasMatriculadas() {
+        return disciplinasMatriculadas;
+    }
+    public void adicionarDisciplina(Disciplina disciplina) {
+        if (!disciplinasMatriculadas.contains(disciplina)) {
+            disciplinasMatriculadas.add(disciplina);
+        }
+    }
+    public void removerDisciplina(Disciplina disciplina) {
+        disciplinasMatriculadas.remove(disciplina);
+    }
 
     @Override
     public String toString() {
