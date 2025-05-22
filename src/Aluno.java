@@ -28,10 +28,6 @@ public abstract class Aluno extends Pessoa {
             disciplinasMatriculadas.add(disciplina);
         }
     }
-    public void removerDisciplina(Disciplina disciplina) {
-        disciplinasMatriculadas.remove(disciplina);
-    }
-
     @Override
     public String toString() {
         return super.toString() + "\nCurso: " + curso;

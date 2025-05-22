@@ -37,7 +37,7 @@ public class Turma {
         }
 
         alunosMatriculados.add(aluno);
-        aluno.adicionarDisciplina(disciplina);
+        //aluno.adicionarDisciplina(disciplina);
         return true;
     }
 
