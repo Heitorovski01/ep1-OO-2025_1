@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class AlunoUI {
     private final AlunoService alunoService = new AlunoService();
+    private final DisciplinaService disciplinaService = new DisciplinaService();
     private Scanner scanner = new Scanner(System.in);
 
     public void menu(){
@@ -18,6 +19,7 @@ public class AlunoUI {
             System.out.println("5 - Salvar Alunos");
             System.out.println("6 - Carregar Alunos");
             System.out.println("7 - Editar Aluno");
+            System.out.println("8 - Matricular Aluno em Disciplina");
             System.out.println("0 - Voltar ao Menu Principal");
             System.out.print(">> ");
             opcao = scanner.nextInt(); scanner.nextLine();
@@ -30,6 +32,7 @@ public class AlunoUI {
                 case 5 -> salvarAlunos();
                 case 6 -> carregarAlunos();
                 case 7 -> editarAluno();
+                case 8 -> matricularAlunoEmDisciplina();
                 case 0 -> System.out.println("Saindo do modo Aluno...");
                 default -> System.out.println("Opção inválida.");
             }
@@ -171,4 +174,45 @@ public class AlunoUI {
         }
     }
 
+    private void matricularAlunoEmDisciplina() {
+        System.out.print("Matrícula do aluno: ");
+        String matricula = scanner.nextLine();
+
+        Aluno aluno = alunoService.buscarPorMatricula(matricula);
+        if (aluno == null) {
+            System.out.println("Aluno não encontrado.");
+            return;
+        }
+
+        System.out.println("Quantidade de disciplinas existentes: " + disciplinaService.getDisciplinas().size());
+        System.out.print("Código da disciplina: ");
+        String codigo = scanner.nextLine();
+
+        Disciplina disciplina = disciplinaService.buscarPorCodigo(codigo);
+        if (disciplina == null) {
+            System.out.println("Disciplina não encontrada.");
+            return;
+        }
+
+        if (aluno.getDisciplinasMatriculadas().contains(disciplina)) {
+            System.out.println("Aluno já matriculado nesta disciplina.");
+            return;
+        }
+
+        int qtd = aluno.getDisciplinasMatriculadas().size() + 1;
+        if (!aluno.podeMatricular(qtd)) {
+            System.out.println("Este aluno não pode se matricular em mais disciplinas.");
+            return;
+        }
+
+        for (Disciplina pre : disciplina.getPreRequisitos()) {
+            if (!aluno.getDisciplinasMatriculadas().contains(pre)) {
+                System.out.println("Aluno não possui o pré-requisito: " + pre.getNome());
+                return;
+            }
+        }
+
+        aluno.adicionarDisciplina(disciplina);
+        System.out.println("Aluno matriculado com sucesso.");
+    }
 }
