@@ -9,10 +9,10 @@ O enunciado do trabalho pode ser encontrado aqui:
 
 ## Dados do Aluno
 
-- **Nome completo:** [Preencher aqui]
-- **Matrícula:** [Preencher aqui]
-- **Curso:** [Preencher aqui]
-- **Turma:** [Preencher aqui]
+- **Nome completo:** Heitor Pinheiro Gonçalves das Chagas
+- **Matrícula:** 242028682
+- **Curso:** Engenharias
+- **Turma:** 06
 
 ---
 
