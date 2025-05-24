@@ -4,6 +4,7 @@ public class SistemaPrincipal {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         AlunoUI alunoUI = new AlunoUI();
+        DisciplinaUI disciplinaUI = new DisciplinaUI();
 
         int opcao;
         do {
@@ -17,7 +18,7 @@ public class SistemaPrincipal {
 
             switch (opcao) {
                 case 1 -> alunoUI.menu();
-                case 2 -> System.out.println("Modo Disciplina ainda não implementado.");
+                case 2 -> disciplinaUI.menu();
                 case 3 -> System.out.println("Modo Avaliação ainda não implementado.");
                 case 0 -> System.out.println("Encerrando...");
                 default -> System.out.println("Opção inválida.");

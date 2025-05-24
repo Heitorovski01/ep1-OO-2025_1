@@ -9,14 +9,15 @@ public class Turma {
     private boolean presencial;
     private String sala;
     private int capacidadeMaxima;
+    private int tipo;
 
     private List<Aluno> alunosMatriculados = new ArrayList<>();
 
-    public Turma(Disciplina disciplina, Professor professor, String semestre,
-                 String horario, boolean presencial, String sala, int capacidadeMaxima) {
+    public Turma(Disciplina disciplina, Professor professor, String semestre, int tipo, boolean presencial, String sala, String horario, int capacidade) {
         this.disciplina = disciplina;
         this.professor = professor;
         this.semestre = semestre;
+        this.tipo = tipo;
         this.horario = horario;
         this.presencial = presencial;
         this.sala = sala;
@@ -43,6 +44,10 @@ public class Turma {
 
     public List<Aluno> getAlunosMatriculados() {
         return alunosMatriculados;
+    }
+
+    public Disciplina getDisciplina() {
+        return disciplina;
     }
 
     public String toString() {
