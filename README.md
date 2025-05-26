@@ -19,16 +19,49 @@ O enunciado do trabalho pode ser encontrado aqui:
 ## Instruções para Compilação e Execução
 
 1. **Compilação:**  
-   [Descrever aqui como compilar o projeto. Exemplo: `javac Main.java` ou o script usado]
+   1° Baixe a pasta src
+   2° Abra o terminal de sua preferência
+   3°  cd "C:\Users\(seu usuario)\Downloads\src\Sistema"
+   4° javac -d bin src\modelos\*.java src\servicos\*.java src\ui\*.java src\main\*.java
+   
 
-2. **Execução:**  
-   [Descrever aqui como executar o projeto. Exemplo: `java Main` ou o script usado]
+3. **Execução:**  
+   1° java -cp bin main.SistemaPrincipal
 
-3. **Estrutura de Pastas:**  
-   [Descrever aqui as principais pastas do projeto]
+4. **Estrutura de Pastas:**  
+   ├── modelos/ # Classes de domínio (entidades do sistema)
+│ ├── Aluno.java
+│ ├── AlunoEspecial.java
+│ ├── AlunoNormal.java
+│ ├── Avaliacao.java
+│ ├── Disciplina.java
+│ ├── Pessoa.java
+│ ├── Professor.java
+│ └── Turma.java
+│
+├── servicos/ # Lógica de negócio e persistência
+│ ├── AlunoService.java
+│ ├── AvaliacaoService.java
+│ ├── DisciplinaService.java
+│ ├── ProfessorService.java
+│ └── TurmaService.java
+│
+├── ui/ # Interfaces de usuário (menu e entrada de dados)
+│ ├── AlunoUI.java
+│ ├── AvaliacaoUI.java
+│ ├── DisciplinaUI.java
+│ └── ProfessorUI.java
+│
+├── main/ # Classe principal do sistema
+│ └── SistemaPrincipal.java
+│
+├── disciplinas.txt # Arquivos de persistência
+├── professores.txt
+├── alunos.txt
+├── turmas.txt
 
 3. **Versão do JAVA utilizada:**  
-   [Descrever aqui como versão do JAVA utilizada no projeto. Sugestão: `java 21`]
+   Java 21
 
 ---
 
@@ -43,7 +76,7 @@ O enunciado do trabalho pode ser encontrado aqui:
 1. Menu Principal:  
    ![Inserir Print 1](caminho/do/print1.png)
 
-2. Cadastro de modelos.Aluno:  
+2. Cadastro de Aluno:  
    ![Inserir Print 2](caminho/do/print2.png)
 
 3. Relatório de Frequência/Notas:  
@@ -53,15 +86,15 @@ O enunciado do trabalho pode ser encontrado aqui:
 
 ## Principais Funcionalidades Implementadas
 
-- [ ] Cadastro, listagem, matrícula e trancamento de alunos (Normais e Especiais)
-- [ ] Cadastro de disciplinas e criação de turmas (presenciais e remotas)
-- [ ] Matrícula de alunos em turmas, respeitando vagas e pré-requisitos
-- [ ] Lançamento de notas e controle de presença
-- [ ] Cálculo de média final e verificação de aprovação/reprovação
-- [ ] Relatórios de desempenho acadêmico por aluno, turma e disciplina
-- [ ] Persistência de dados em arquivos (.txt ou .csv)
-- [ ] Tratamento de duplicidade de matrículas
-- [ ] Uso de herança, polimorfismo e encapsulamento
+- [OK] Cadastro, listagem, matrícula e trancamento de alunos (Normais e Especiais)
+- [OK ] Cadastro de disciplinas e criação de turmas (presenciais e remotas)
+- [OK ] Matrícula de alunos em turmas, respeitando vagas e pré-requisitos
+- [OK ] Lançamento de notas e controle de presença
+- [OK ] Cálculo de média final e verificação de aprovação/reprovação
+- [OK ] Relatórios de desempenho acadêmico por aluno, turma e disciplina
+- [OK ] Persistência de dados em arquivos (.txt ou .csv)
+- [OK ] Tratamento de duplicidade de matrículas
+- [OK ] Uso de herança, polimorfismo e encapsulamento
 
 ---
 
@@ -73,4 +106,4 @@ O enunciado do trabalho pode ser encontrado aqui:
 
 ## Contato
 
-- [Opcional: E-mail pessoal do aluno.]
+- Heitorbsbdf@gmail.com
