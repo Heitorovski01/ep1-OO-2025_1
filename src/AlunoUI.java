@@ -3,10 +3,14 @@ import java.util.Scanner;
 
 
 public class AlunoUI {
-    private final AlunoService alunoService = new AlunoService();
-    private final DisciplinaService disciplinaService = new DisciplinaService();
+    private final AlunoService alunoService;
+    private final DisciplinaService disciplinaService;
     private Scanner scanner = new Scanner(System.in);
 
+    public AlunoUI(AlunoService alunoService, DisciplinaService disciplinaService) {
+        this.alunoService = alunoService;
+        this.disciplinaService = disciplinaService;
+    }
     public void menu(){
         int opcao;
 
@@ -17,7 +21,7 @@ public class AlunoUI {
             System.out.println("3 - Trancar Disciplina");
             System.out.println("4 - Trancar Semestre");
             System.out.println("5 - Salvar Alunos");
-            System.out.println("6 - Carregar Alunos");
+            //System.out.println("6 - Carregar Alunos");
             System.out.println("7 - Editar Aluno");
             System.out.println("8 - Matricular Aluno em Disciplina");
             System.out.println("0 - Voltar ao Menu Principal");
@@ -30,7 +34,7 @@ public class AlunoUI {
                 case 3 -> trancarDisciplina();
                 case 4 -> trancarSemestre();
                 case 5 -> salvarAlunos();
-                case 6 -> carregarAlunos();
+                //case 6 -> carregarAlunos();
                 case 7 -> editarAluno();
                 case 8 -> matricularAlunoEmDisciplina();
                 case 0 -> System.out.println("Saindo do modo Aluno...");
@@ -136,7 +140,6 @@ public class AlunoUI {
     }
 
     private void carregarAlunos(){
-        alunoService.limpar();
         alunoService.carregar(alunoService.getAlunos(), "alunos.txt");
     }
 

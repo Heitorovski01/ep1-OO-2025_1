@@ -10,6 +10,6 @@ public class AlunoEspecial extends Aluno {
 
     @Override
     public String toString() {
-        return super.toString() + "Disciplinas: " + getDisciplinasMatriculadas() + "\n[Aluno especial]";
+        return super.toString() + "\nDisciplinas: " + getDisciplinasMatriculadas() + "\n[Aluno especial]";
     }
 }

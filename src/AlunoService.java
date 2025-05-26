@@ -102,4 +102,7 @@ public class AlunoService {
             System.out.println("Erro ao carregar alunos: " + e.getMessage());
         }
     }
+    public void inicializar() {
+        carregar(alunos,"alunos.txt");
+    }
 }

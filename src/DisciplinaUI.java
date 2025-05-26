@@ -3,12 +3,14 @@ import java.util.Scanner;
 
 public class DisciplinaUI {
     private final Scanner scanner = new Scanner(System.in);
-    private DisciplinaService disciplinaService = new DisciplinaService();
+    private DisciplinaService disciplinaService;
     private List<Professor> professores;
     private TurmaService turmaService = new TurmaService();
 
-    public void DisciplinaUI(DisciplinaService disciplinaService) {
+    public DisciplinaUI(DisciplinaService disciplinaService, ProfessorService professorService, TurmaService turmaService) {
         this.disciplinaService = disciplinaService;
+        this.professores = professorService.listarTodos();
+        this.turmaService = turmaService;
     }
 
     public void menu() {
@@ -165,7 +167,6 @@ public class DisciplinaUI {
     }
 
     private void carregar() {
-        disciplinaService.limpar();
         disciplinaService.carregar(disciplinaService.getDisciplinas(), "disciplinas.txt");
     }
 }

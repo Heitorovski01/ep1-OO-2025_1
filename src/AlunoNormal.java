@@ -11,6 +11,6 @@ public class AlunoNormal extends Aluno {
 
     @Override
     public String toString() {
-        return super.toString() + "Disciplinas: " + getDisciplinasMatriculadas() + "\n[Aluno normal]";
+        return super.toString() + "\nDisciplinas: " + getDisciplinasMatriculadas() + "\n[Aluno normal]";
     }
 }

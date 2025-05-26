@@ -21,7 +21,30 @@ public class Turma {
         this.horario = horario;
         this.presencial = presencial;
         this.sala = sala;
-        this.capacidadeMaxima = capacidadeMaxima;
+        this.capacidadeMaxima = capacidade;
+    }
+
+    public Professor getProfessor() {
+        return professor;
+    }
+
+    public String getSemestre() {
+        return semestre;
+    }
+    public int getTipoAvaliacao() {
+        return tipo;
+    }
+    public boolean isPresencial() {
+        return presencial;
+    }
+    public String getSala() {
+        return sala;
+    }
+    public int getCapacidadeMaxima() {
+        return capacidadeMaxima;
+    }
+    public String getHorario() {
+        return horario;
     }
 
     public boolean matricular(Aluno aluno) {
@@ -29,6 +52,8 @@ public class Turma {
             System.out.println("Capacidade máxima!");
             return false;
         }
+
+
 
         for (Disciplina pre : disciplina.getPreRequisitos()){
             if(!aluno.getDisciplinasMatriculadas().contains(pre)) {

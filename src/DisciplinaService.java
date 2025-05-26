@@ -28,6 +28,10 @@ public class DisciplinaService {
     }
 
     public List<Disciplina> listarTodas() {
+        System.out.println("Listando disciplinas: " + disciplinas.size());
+        for (Disciplina d : disciplinas) {
+            System.out.println(d.getNome() + " (" + d.getCodigo() + ")");
+        }
         return new ArrayList<>(disciplinas);
     }
 
@@ -50,7 +54,6 @@ public class DisciplinaService {
             System.out.println("Erro ao salvar disciplinas: " + e.getMessage());
         }
     }
-
     public void carregar(List<Disciplina> lista, String caminho) {
         int novas = 0;
         try (BufferedReader reader = new BufferedReader(new FileReader(caminho))) {
@@ -80,5 +83,8 @@ public class DisciplinaService {
         } catch (IOException e) {
             System.out.println("Erro ao carregar disciplinas: " + e.getMessage());
         }
+    }
+    public void inicializar() {
+        carregar(getDisciplinas(), "disciplinas.txt");
     }
 }
