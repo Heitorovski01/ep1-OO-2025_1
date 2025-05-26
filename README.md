@@ -74,10 +74,10 @@ O enunciado do trabalho pode ser encontrado aqui:
 ## Prints da Execução
 
 1. Menu Principal:  
-   \PrintMenuPrincipal.png\
+   ./PrintMenuPrincipal.png
 
 2. Cadastro de Aluno:  
-   \PrintCadastroDeAlunos.png\
+   ./PrintCadastroDeAlunos.png
 
 3. Relatório de Frequência/Notas:  
 
