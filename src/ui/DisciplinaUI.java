@@ -136,7 +136,8 @@ public class DisciplinaUI {
         System.out.print("Semestre (ex: 2025.1): ");
         String semestre = scanner.nextLine();
 
-        System.out.print("Tipo de avaliação (1 ou 2): ");
+        System.out.print("Tipo de avaliação (1 - Media Final = (P1 + P2 + P3 + L + S) / 5\n" +
+                "2 - Media Final = (P1 + P2 * 2 + P3 * 3 + L + S) / 8): ");
         int tipo = scanner.nextInt(); scanner.nextLine();
 
         System.out.print("É presencial? (s/n): ");
