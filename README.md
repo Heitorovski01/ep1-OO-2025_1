@@ -67,7 +67,7 @@ O enunciado do trabalho pode ser encontrado aqui:
 
 ## Vídeo de Demonstração
 
-- [Inserir o link para o vídeo no YouTube/Drive aqui]
+- [[ILink do video](https://youtu.be/Ai7p3zxB-so)]
 
 ---
 
@@ -100,8 +100,8 @@ O enunciado do trabalho pode ser encontrado aqui:
 
 ## Observações (Extras ou Dificuldades)
 
-- [Espaço para o aluno comentar qualquer funcionalidade extra que implementou, dificuldades enfrentadas, ou considerações importantes.]
-
+- 1. Organização de pacotes e imports - definir os principais pacotes main, modelos, servicos, ui
+  2. Persistência de dados em arquivos - Criar métodos como salvar e carregar, sem erros de sobrescrita 
 ---
 
 ## Contato
