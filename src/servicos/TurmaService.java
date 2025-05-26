@@ -1,3 +1,9 @@
+package servicos;
+
+import modelos.Disciplina;
+import modelos.Professor;
+import modelos.Turma;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;

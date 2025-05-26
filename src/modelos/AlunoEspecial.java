@@ -1,3 +1,5 @@
+package modelos;
+
 public class AlunoEspecial extends Aluno {
     public AlunoEspecial(String nome, String matricula, String curso) {
         super(nome, matricula, curso);
@@ -10,6 +12,6 @@ public class AlunoEspecial extends Aluno {
 
     @Override
     public String toString() {
-        return super.toString() + "\nDisciplinas: " + getDisciplinasMatriculadas() + "\n[Aluno especial]";
+        return super.toString() + "\nDisciplinas: " + getDisciplinasMatriculadas() + "\n[modelos.Aluno especial]";
     }
 }

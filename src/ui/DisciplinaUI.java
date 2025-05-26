@@ -1,3 +1,12 @@
+package ui;
+
+import modelos.Disciplina;
+import modelos.Professor;
+import modelos.Turma;
+import servicos.DisciplinaService;
+import servicos.ProfessorService;
+import servicos.TurmaService;
+
 import java.util.List;
 import java.util.Scanner;
 

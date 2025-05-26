@@ -1,3 +1,19 @@
+package main;
+
+import servicos.AlunoService;
+import servicos.AvaliacaoService;
+import servicos.DisciplinaService;
+import servicos.ProfessorService;
+import servicos.TurmaService;
+import ui.AlunoUI;
+import ui.AvaliacaoUI;
+import ui.DisciplinaUI;
+import ui.ProfessorUI;
+import modelos.Aluno;
+import modelos.Professor;
+import modelos.Disciplina;
+import modelos.Turma;
+
 import java.util.Scanner;
 
 public class SistemaPrincipal {

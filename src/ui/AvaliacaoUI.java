@@ -1,3 +1,11 @@
+package ui;
+
+import modelos.*;
+import servicos.AlunoService;
+import servicos.AvaliacaoService;
+import servicos.ProfessorService;
+import servicos.TurmaService;
+
 import java.util.List;
 import java.util.Scanner;
 
@@ -200,7 +208,7 @@ public class AvaliacaoUI {
     private void relatorioPorDisciplina() {
         System.out.print("Código da disciplina: ");
         String codigoDisciplina = scanner.nextLine();
-        Disciplina disciplina = turmaService.getDisciplinaService().buscarPorCodigo(codigoDisciplina); // Acessa o DisciplinaService pelo TurmaService
+        Disciplina disciplina = turmaService.getDisciplinaService().buscarPorCodigo(codigoDisciplina); // Acessa o servicos.DisciplinaService pelo servicos.TurmaService
         if (disciplina == null) {
             System.out.println("Disciplina não encontrada.");
             return;

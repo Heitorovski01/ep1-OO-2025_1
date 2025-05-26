@@ -1,3 +1,12 @@
+package ui;
+
+import modelos.Aluno;
+import modelos.AlunoEspecial;
+import modelos.AlunoNormal;
+import modelos.Disciplina;
+import servicos.AlunoService;
+import servicos.DisciplinaService;
+
 import java.util.List;
 import java.util.Scanner;
 
@@ -88,14 +97,14 @@ public class AlunoUI {
     }
 
     private void trancarDisciplina(){
-        System.out.println("\n--- Trancar Disciplina ---");
+        System.out.println("\n--- Trancar modelos.Disciplina ---");
         System.out.println("Digite a matricula do aluno: ");
         String matricula = scanner.nextLine();
 
         Aluno aluno = alunoService.buscarPorMatricula(matricula);
 
         if(aluno == null){
-            System.out.println("Aluno não encontrado.");
+            System.out.println("modelos.Aluno não encontrado.");
             return;
         }
 
@@ -119,7 +128,7 @@ public class AlunoUI {
 
         Disciplina trancada = lista.get(opcaoTrancada-1);
         alunoService.trancarDisciplina(matricula, trancada);
-        System.out.println("Disciplina trancada com sucesso!");
+        System.out.println("modelos.Disciplina trancada com sucesso!");
     }
 
     private void trancarSemestre(){
@@ -131,7 +140,7 @@ public class AlunoUI {
         if(sucesso){
             System.out.println("Semestre trancado com sucesso!");
         }else{
-            System.out.println("Aluno não encontrado.");
+            System.out.println("modelos.Aluno não encontrado.");
         }
     }
 
@@ -149,7 +158,7 @@ public class AlunoUI {
 
         Aluno aluno = alunoService.buscarPorMatricula(matricula);
         if (aluno == null) {
-            System.out.println("Aluno não encontrado.");
+            System.out.println("modelos.Aluno não encontrado.");
             return;
         }
 

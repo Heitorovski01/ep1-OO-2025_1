@@ -1,3 +1,8 @@
+package ui;
+
+import modelos.Professor;
+import servicos.ProfessorService;
+
 import java.util.List;
 import java.util.Scanner;
 

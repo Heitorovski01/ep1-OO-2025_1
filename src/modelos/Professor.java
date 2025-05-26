@@ -1,3 +1,5 @@
+package modelos;
+
 public class Professor extends Pessoa {
     private String area;
 
@@ -15,6 +17,6 @@ public class Professor extends Pessoa {
 
     @Override
     public String toString() {
-        return super.toString() + "\nArea: " + area + "\n[Professor]";
+        return super.toString() + "\nArea: " + area + "\n[modelos.Professor]";
     }
 }

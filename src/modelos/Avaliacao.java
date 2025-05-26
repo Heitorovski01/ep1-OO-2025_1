@@ -1,3 +1,5 @@
+package modelos;
+
 public class Avaliacao {
     private Aluno aluno;
     private Turma turma;
@@ -126,8 +128,8 @@ public class Avaliacao {
 
     @Override
     public String toString() {
-        return "Avaliação para Aluno: " + aluno.getNome() + " (Matrícula: " + aluno.getMatricula() + ")" +
-                "\n  Turma: " + turma.getDisciplina().getNome() + " - " + turma.getSemestre() +
+        return "Avaliação para modelos.Aluno: " + aluno.getNome() + " (Matrícula: " + aluno.getMatricula() + ")" +
+                "\n  modelos.Turma: " + turma.getDisciplina().getNome() + " - " + turma.getSemestre() +
                 "\n  P1: " + (p1 == -1 ? "N/A" : p1) +
                 ", P2: " + (p2 == -1 ? "N/A" : p2) +
                 ", P3: " + (p3 == -1 ? "N/A" : p3) +

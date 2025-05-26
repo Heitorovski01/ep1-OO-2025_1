@@ -7,12 +7,12 @@ Desenvolvimento de um sistema acadêmico para gerenciar alunos, disciplinas, pro
 O enunciado do trabalho pode ser encontrado aqui:
 - [Trabalho 1 - Sistema Acadêmico](https://github.com/lboaventura25/OO-T06_2025.1_UnB_FCTE/blob/main/trabalhos/ep1/README.md)
 
-## Dados do Aluno
+## Dados do modelos.Aluno
 
 - **Nome completo:** Heitor Pinheiro Gonçalves das Chagas
 - **Matrícula:** 242028682
 - **Curso:** Engenharias
-- **Turma:** 06
+- **modelos.Turma:** 06
 
 ---
 
@@ -43,7 +43,7 @@ O enunciado do trabalho pode ser encontrado aqui:
 1. Menu Principal:  
    ![Inserir Print 1](caminho/do/print1.png)
 
-2. Cadastro de Aluno:  
+2. Cadastro de modelos.Aluno:  
    ![Inserir Print 2](caminho/do/print2.png)
 
 3. Relatório de Frequência/Notas:  

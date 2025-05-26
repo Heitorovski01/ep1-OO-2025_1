@@ -1,3 +1,5 @@
+package modelos;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -57,7 +59,7 @@ public class Turma {
 
         for (Disciplina pre : disciplina.getPreRequisitos()){
             if(!aluno.getDisciplinasMatriculadas().contains(pre)) {
-                System.out.println("Aluno não possui o pré-requisito: " + pre.getNome());
+                System.out.println("modelos.Aluno não possui o pré-requisito: " + pre.getNome());
                 return false;
             }
         }
@@ -76,8 +78,8 @@ public class Turma {
     }
 
     public String toString() {
-        return "Turma de " + disciplina.getNome()
-                + "\nProfessor: " + professor.getNome()
+        return "modelos.Turma de " + disciplina.getNome()
+                + "\nmodelos.Professor: " + professor.getNome()
                 + "\nSemestre: " + semestre
                 + "\nHorário: " + horario
                 + (presencial ? "\nPresencial - Sala: " + sala : "\nRemota")
