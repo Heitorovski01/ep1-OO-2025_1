@@ -74,10 +74,10 @@ O enunciado do trabalho pode ser encontrado aqui:
 ## Prints da Execução
 
 1. Menu Principal:  
-   ./PrintMenuPrincipal.png
+  - [PrintMenuPrincipal.png](https://github.com/Heitorovski01/ep1-OO-2025_1/blob/main/PrintCadastroDeAlunos.png)
 
 2. Cadastro de Aluno:  
-   ./PrintCadastroDeAlunos.png
+  - [PrintCadastroDeAlunos.png](https://github.com/Heitorovski01/ep1-OO-2025_1/blob/main/PrintCadastroDeAlunos.png)
 
 3. Relatório de Frequência/Notas:  
 
