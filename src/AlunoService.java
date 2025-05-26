@@ -26,6 +26,7 @@ public class AlunoService {
         }
         return null;
     }
+
     public boolean trancarDisciplina(String matricula, Disciplina disciplina) {
         Aluno aluno = buscarPorMatricula(matricula);
         if (aluno == null) return false;
@@ -51,10 +52,10 @@ public class AlunoService {
         alunos.clear();
     }
 
-    public void salvar(List<Aluno> alunos, String caminho) {
+    public void salvar(List<Aluno> lista, String caminho) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(caminho))) {
-            for (Aluno aluno : alunos) {
-                String tipo = aluno instanceof AlunoEspecial ? "especial" : "normal";
+            for (Aluno aluno : lista) {
+                String tipo = (aluno instanceof AlunoEspecial) ? "especial" : "normal";
                 writer.write(aluno.getNome() + ";" + aluno.getMatricula() + ";" + aluno.getCurso() + ";" + tipo);
                 writer.newLine();
             }
@@ -64,8 +65,8 @@ public class AlunoService {
         }
     }
 
-    public void carregar(List<Aluno> alunos, String caminho) {
-        alunos.clear();
+    public void carregar(List<Aluno> lista, String caminho) {
+        int novos = 0;
         try (BufferedReader reader = new BufferedReader(new FileReader(caminho))) {
             String linha;
             while ((linha = reader.readLine()) != null) {
@@ -76,14 +77,27 @@ public class AlunoService {
                     String curso = partes[2];
                     String tipo = partes[3];
 
-                    Aluno aluno = tipo.equals("especial")
-                            ? new AlunoEspecial(nome, matricula, curso)
-                            : new AlunoNormal(nome, matricula, curso);
+                    boolean existe = false;
+                    for (Aluno a : lista) {
+                        if (a.getMatricula().equalsIgnoreCase(matricula)) {
+                            existe = true;
+                            break;
+                        }
+                    }
 
-                    alunos.add(aluno);
+                    if (!existe) {
+                        Aluno novoAluno;
+                        if (tipo.equalsIgnoreCase("especial")) {
+                            novoAluno = new AlunoEspecial(nome, matricula, curso);
+                        } else {
+                            novoAluno = new AlunoNormal(nome, matricula, curso);
+                        }
+                        lista.add(novoAluno);
+                        novos++;
+                    }
                 }
             }
-            System.out.println("Alunos carregados de: " + caminho);
+            System.out.println("Alunos carregados: " + novos + " novos adicionados.");
         } catch (IOException e) {
             System.out.println("Erro ao carregar alunos: " + e.getMessage());
         }

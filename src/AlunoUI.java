@@ -41,7 +41,7 @@ public class AlunoUI {
     private void cadastrarAluno(){
         System.out.println("\n--- Cadastrar Aluno ---");
         System.out.println("Digite o nome do aluno: ");
-        String nome = scanner.nextLine(); scanner.nextLine();
+        String nome = scanner.nextLine();
 
         System.out.println("Digite a Matricula do aluno: ");
         String matricula = scanner.nextLine();
